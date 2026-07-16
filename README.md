@@ -1,3 +1,38 @@
+# Codex CLI — Tutorial Edition
+
+> **This is a clone of OpenAI's [openai/codex](https://github.com/openai/codex), enhanced with an in-depth tutorial documentation set.**
+>
+> The tutorial docs were researched and written by **Claude Fable 5**. They explain the Codex CLI as an *agent harness* — its architecture, every subsystem (with source-code references), an engineering critique, a roadmap, and a feature-by-feature competitive analysis against Anthropic's Claude Code and xAI's Grok Build.
+>
+> All original Codex source code is unchanged and remains under its [Apache-2.0 License](LICENSE). The only additions in this fork are the documentation under [`harness-docs/`](harness-docs/) and this README notice.
+
+## What was added
+
+A complete, code-referenced documentation set lives in **[`harness-docs/`](harness-docs/)**. Start at [`harness-docs/index.md`](harness-docs/index.md).
+
+| Read this to… | File |
+|---------------|------|
+| Understand what an agent harness *is* | [01-what-is-a-harness.md](harness-docs/01-what-is-a-harness.md) |
+| Get the Codex mental model + crate map | [02-codex-overview.md](harness-docs/02-codex-overview.md) |
+| Look up any term | [03-key-concepts.md](harness-docs/03-key-concepts.md) |
+| Read the engine deep-dives | [04-agent-loop](harness-docs/04-agent-loop.md) · [05-tools-and-approvals](harness-docs/05-tools-and-approvals.md) · [06-execution-and-sandboxing](harness-docs/06-execution-and-sandboxing.md) · [07-model-client](harness-docs/07-model-client.md) · [08-context-state-memory](harness-docs/08-context-state-memory.md) · [09-extensibility](harness-docs/09-extensibility.md) · [10-frontends-and-protocol](harness-docs/10-frontends-and-protocol.md) · [11-config-auth-telemetry](harness-docs/11-config-auth-telemetry.md) |
+| See a critique of the harness | [12-critique.md](harness-docs/12-critique.md) |
+| See proposed improvements + new features | [13-improvements-and-new-features.md](harness-docs/13-improvements-and-new-features.md) |
+| Compare Codex vs Claude Code vs Grok Build | [14-competitive-analysis.md](harness-docs/14-competitive-analysis.md) |
+
+Every claim about Codex cites `crate/src/file.rs:line` in the source tree. Claims about other tools cite public docs and are marked where a fact rests on a single or unverified source.
+
+## Attribution
+
+- **Original project:** [openai/codex](https://github.com/openai/codex) — the Codex CLI coding agent from OpenAI (Apache-2.0).
+- **Tutorial documentation:** authored by Claude Fable 5. Educational/reference material only; not affiliated with or endorsed by OpenAI, Anthropic, or xAI.
+
+---
+
+The original Codex CLI README follows, preserved verbatim.
+
+---
+
 <p align="center"><strong>Codex CLI</strong> is a coding agent from OpenAI that runs locally on your computer.
 <p align="center">
   <img src="https://github.com/openai/codex/blob/main/.github/codex-cli-splash.png" alt="Codex CLI splash" width="80%" />
